@@ -10,5 +10,5 @@ gcloud artifacts repositories create $REPOSITORY \
 gcloud auth configure-docker $REGION-docker.pkg.dev
 
 # Build container image using Google cloud build and push to repository
-gcloud builds submit --tag $REGION-docker.pkg.dev/$PROJECT/$REPOSITORY/dataflow/beam:2.47.0 .
+gcloud builds submit --tag "$REGION-docker.pkg.dev/$PROJECT/$REPOSITORY/$CONTAINER:$TAG" .
 
